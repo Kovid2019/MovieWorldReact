@@ -1,0 +1,73 @@
+.wrapper {
+  background: rgba(71, 71, 71);
+  min-height: 100vh;
+}
+nav {
+  background: rgba(0, 0, 0, 0.47);
+}
+.hero {
+  position: relative;
+  min-height: 80vh;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.363);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.hero-content {
+  max-width: 450px;
+  z-index: 2;
+}
+
+/* form  */
+
+.form-center {
+  position: absolute;
+  top: 50%;
+  /* width: 450px; */
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+.form-top {
+  position: absolute;
+  top: 15%;
+  width: 450px;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  left: 50%;
+}
+/* Card */
+.movie-card-item {
+  background: rgba(255, 255, 255, 0.468);
+  backdrop-filter: blur(5px);
+  max-width: 450px;
+  /* left: 50%; */
+}
+.movie-card-item img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .movie-card-item img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* End Card */
+.showMovie {
+  transform: scale(1);
+  animation: zoom 0.5s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
